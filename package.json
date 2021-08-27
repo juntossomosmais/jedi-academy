@@ -1,0 +1,22 @@
+{
+  "name": "jedi-academy",
+  "version": "0.0.1",
+  "description": "JS+ Playbook",
+  "main": "index.js",
+  "authors": {
+    "name": "JS+",
+    "email": ""
+  },
+  "repository": "https://github.com/juntossomosmais/jedi-academy/jedi-academy",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  },
+  "dependencies": {
+    "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
+  }
+}
