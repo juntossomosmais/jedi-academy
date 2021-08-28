@@ -1,3 +1,8 @@
+---
+tags:
+  - melhores práticas
+  - testes
+---
 # Testes
 Os testes devem ser bem estruturados para que não só facilite o desenvolvimento mas também a leitura, já que os teste são a garantia do bom funcionamento do código e também a documentação daqueles componentes.
 
@@ -11,49 +16,47 @@ Para melhorar a legibilidade dos testes iremos usar uma nomenclatura que express
 Cada uma das partes deve ser camel-case sendo que cada etapa deve ser separada por underline, snake-case, desta forma 
 `MétodoTestado_cenárioDoTeste_ComportamentoEsperado`.
 
-
-<span style="font-weight:bold;color:red;">Ruim:</span>
+:::bad Ruim
 ```csharp
 [Fact]
 public void ShouldAddANumberAndReturnSameNumber()
 {
     var stringCalculator = new StringCalculator();
-
     var actual = stringCalculator.Add("0");
-
     actual
         .Should()
         .Be(0);
 }
 ```
+:::
 
-<span style="font-weight:bold;color:green;">Ótimo:</span>
-```csharp
+:::good Ótimo
+```csharp {2}
 [Fact]
 public void Add_SingleNumber_ReturnsSameNumber()
 {
     var stringCalculator = new StringCalculator();
-
     var actual = stringCalculator.Add("0");
-
     actual
         .Should()
         .Be(0);
 }
 ```
+:::
+
 :::tip 💡Dica
 Para escrever nomes mais expressivos descreva o comportamento e não a implementação.
 :::
 
 ## Padrão Arrange Act e Assert 
-*AAA* é o padrão que separa a implementação do teste em 3 partes, que além de melhorar a legibilidade ajuda a desenvolver os testes, já que cria uma separação clara entre as etapas: 
+*AAA* é o padrão que separa a implementação do teste em *3* partes, que além de melhorar a legibilidade ajuda a desenvolver os testes, já que cria uma separação clara entre as etapas: 
 
-1. Arrange: Organiza os estados para seu teste, cria objetos, payloads e etc.
-2. Act: Realiza a ação para ser validada
-3. Assert: Validação da ação anterior
+1. **Arrange**: Organiza os estados para seu teste, cria objetos, payloads e etc.
+2. **Act**: Realiza a ação para ser validada
+3. **Assert**: Validação da ação anterior
 
 
-<span style="font-weight:bold;color:red;">Ruim:</span>
+:::bad Ruim
 ```csharp
 [Fact]
 public void Add_SingleNumber_ReturnsSameNumber()
@@ -67,9 +70,11 @@ public void Add_SingleNumber_ReturnsSameNumber()
         .Be(0);
 }
 ```
+:::
 
-<span style="font-weight:bold;color:green;">Ótimo:</span>
-```csharp
+
+:::good Ótimo
+```csharp {4,7,10}
 [Fact]
 public void Add_SingleNumber_ReturnsSameNumber()
 {

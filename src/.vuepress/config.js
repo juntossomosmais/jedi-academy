@@ -1,5 +1,5 @@
 const { description } = require('../../package')
-
+const codeContainers = require("./container/codeContainer");
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
@@ -18,7 +18,7 @@ module.exports = {
   head: [
     ['meta', { name: 'theme-color', content: '#ff7d00' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
   ],
 
   /**
@@ -27,26 +27,12 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
+    repo: 'https://github.com/juntossomosmais/jedi-academy',
     editLinks: false,
     docsDir: 'docs',
     editLinkText: '',
     lastUpdated: true,
-    // overrideTheme: 'dark',
-    nav: [
-      {
-        text: 'Guide',
-        link: '/guide/',
-      },
-      {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
-      }
-    ],
+    nav:false ,
     sidebar: {
       '/': [
         {
@@ -65,12 +51,12 @@ module.exports = {
       ],
     }
   },
-
-  /**
-   * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
-   */
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+    ...codeContainers
   ]
+  , markdown: {
+    lineNumbers: true
+  }
 }
