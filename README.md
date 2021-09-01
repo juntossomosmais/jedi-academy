@@ -1,7 +1,7 @@
 # jedi academy
 > `JS+` Playbook 
 
-![playbook print screen](https://github.com/juntossomosmais/jedi-academy/blob/feature/create-structure/src/assets/print.gif)
+![playbook print screen](https://github.com/juntossomosmais/jedi-academy/blob/main/src/assets/print.gif?raw=true)
 
 ## Estrutura do projeto
 ```text
