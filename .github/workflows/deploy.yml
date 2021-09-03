@@ -1,0 +1,19 @@
+name: Deploy documentation
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Build and Deploy
+        uses: jenkey2011/vuepress-deploy@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          TARGET_REPO: juntossomosmais/jedi-academy
+          TARGET_BRANCH: gh_pages_deploy
+          BUILD_SCRIPT: yarn install && yarn build
+          BUILD_DIR: docs/.vuepress/dist/
