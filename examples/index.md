@@ -3,6 +3,12 @@ tags:
   - tags para pesquisa
 ---
 # Tema do artigo
+<authors>
+    <author user="someuser"/> 
+    <author user="otheruser"/>
+</authors>  
+
+---
 Breve introdução
 
 ## Seção

@@ -4,6 +4,13 @@ tags:
   - testes
 ---
 # Testes
+<authors>
+    <author user="leticiasassaki"/> 
+    <author user="nathancaracho"/>
+</authors>  
+
+---
+
 Os testes devem ser bem estruturados para que não só facilite o desenvolvimento mas também a leitura, já que os teste são a garantia do bom funcionamento do código e também a documentação daqueles componentes.
 
 
