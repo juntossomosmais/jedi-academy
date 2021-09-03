@@ -16,4 +16,4 @@ jobs:
           TARGET_REPO: juntossomosmais/jedi-academy
           TARGET_BRANCH: gh_pages_deploy
           BUILD_SCRIPT: yarn install && yarn build
-          BUILD_DIR: docs/.vuepress/dist/
+          BUILD_DIR: src/.vuepress/dist/
