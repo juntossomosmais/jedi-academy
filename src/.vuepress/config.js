@@ -5,6 +5,7 @@ module.exports = {
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
   title: 'JS+ Playbook',
+  base: '/jedi-academy/',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -27,6 +28,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
+    smoothScroll:true,
     repo: 'https://github.com/juntossomosmais/jedi-academy',
     editLinks: false,
     docsDir: 'docs',
