@@ -62,7 +62,7 @@ var meuDicionario = new Dictionary<int, string>();
 ```
 
 ### Retornos anônimos
-Quando trabalhamos objetos ou retornos anônmioss o `var` é um grande aliado. Utilizando o `var` ganhamos o benefício de não precisar declarar a nova variável como `object` e ainda temos as propriedades expostas para que o intellisense nos ajude a programar.
+Quando trabalhamos objetos ou retornos anônimos o `var` é um grande aliado. Utilizando o `var` ganhamos o benefício de não precisar declarar a nova variável como `object` e ainda temos as propriedades expostas para que o intellisense nos ajude a programar.
 
 ```csharp
 var pessoaComEndereco = _context.Pessoa.Select(pessoa => new 
