@@ -12,7 +12,7 @@ tags:
 
 Quando você tem uma dependência de outra API na sua API você deve repassar o erro 500 para frente.
 
-IMAGEM
+<img width="644" alt="Screen Shot 2021-09-30 at 13 34 26" src="https://user-images.githubusercontent.com/1923140/135496346-6e91d0ed-77ef-4300-a05b-b6df6f5bbc50.png">
 
 O padrão para novas API é a imagem acima.
 
