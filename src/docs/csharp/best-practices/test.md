@@ -7,6 +7,7 @@ tags:
 <authors>
     <author user="leticiasassaki"/> 
     <author user="nathancaracho"/>
+    <author user="gabrielfaraday"/>
 </authors>  
 
 ---
@@ -41,6 +42,20 @@ public void ShouldAddANumberAndReturnSameNumber()
 ```csharp {2}
 [Fact]
 public void Add_SingleNumber_ReturnsSameNumber()
+{
+    var stringCalculator = new StringCalculator();
+    var actual = stringCalculator.Add("0");
+    actual
+        .Should()
+        .Be(0);
+}
+```
+
+Ou poderia ser uma variação disto, como:
+
+```csharp {2}
+[Fact]
+public void Add_WhenSingleNumber_ShouldReturnSameNumber()
 {
     var stringCalculator = new StringCalculator();
     var actual = stringCalculator.Add("0");
