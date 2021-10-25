@@ -7,6 +7,7 @@ tags:
 <authors>
     <author user="leticiasassaki"/> 
     <author user="nathancaracho"/>
+    <author user="gabrielfaraday"/>
 </authors>  
 
 ---
@@ -22,6 +23,10 @@ Para melhorar a legibilidade dos testes iremos usar uma nomenclatura que express
 
 Cada uma das partes deve ser camel-case sendo que cada etapa deve ser separada por underline, snake-case, desta forma 
 `MétodoTestado_cenárioDoTeste_ComportamentoEsperado`.
+
+:::tip 💡Dica
+Inclua um `DisplayName` para o teste facilitando a visualização dele na listagem de testes geral. Este `DisplayName` também deve deixar evidente O QUE e QUANDO é esperado do resultado do teste
+:::
 
 :::bad Ruim
 ```csharp
@@ -39,8 +44,22 @@ public void ShouldAddANumberAndReturnSameNumber()
 
 :::good Ótimo
 ```csharp {2}
-[Fact]
+[Fact(DisplayName = "Should return same number when single number")]
 public void Add_SingleNumber_ReturnsSameNumber()
+{
+    var stringCalculator = new StringCalculator();
+    var actual = stringCalculator.Add("0");
+    actual
+        .Should()
+        .Be(0);
+}
+```
+
+Ou poderia ser uma variação disto, como:
+
+```csharp {2}
+[Fact(DisplayName = "Should return same number when single number")]
+public void Add_WhenSingleNumber_ShouldReturnSameNumber()
 {
     var stringCalculator = new StringCalculator();
     var actual = stringCalculator.Add("0");
