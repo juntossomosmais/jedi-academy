@@ -46,6 +46,7 @@ module.exports = {
               collapsable: true,
               children: [
                 'docs/csharp/best-practices/test',
+                'docs/csharp/best-practices/code-style',
               ]
             }
           ]
