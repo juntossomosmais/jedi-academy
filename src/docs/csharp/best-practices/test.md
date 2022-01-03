@@ -21,8 +21,8 @@ Para melhorar a legibilidade dos testes iremos usar uma nomenclatura que express
 2. Cenário Do Teste: Qual cenário está sendo testado.
 3. Comportamento Esperado: Qual o retorno do método ou efeito.  
 
-Cada uma das partes deve ser camel-case sendo que cada etapa deve ser separada por underline, snake-case, desta forma 
-`MétodoTestado_cenárioDoTeste_ComportamentoEsperado`.
+Cada uma das partes deve ser PascalCase sendo que cada etapa deve ser separada por underline, snake-case, desta forma 
+`MétodoTestado_CenárioDoTeste_ComportamentoEsperado`.
 
 :::tip 💡Dica
 Inclua um `DisplayName` para o teste facilitando a visualização dele na listagem de testes geral. Este `DisplayName` também deve deixar evidente O QUE e QUANDO é esperado do resultado do teste
